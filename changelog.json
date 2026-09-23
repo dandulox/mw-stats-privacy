@@ -1,5 +1,25 @@
 [
   {
+    "v": "6.4.0",
+    "date": "2026-09-23",
+    "features": [
+      {
+        "de": "Verschiedene Dashboard-Ansichten sind übersichtlicher geworden: dichte Tabellen sind besser lesbar, bisher stille Ladephasen zeigen jetzt einen Hinweis, und Symbole in der Seitenleiste wirken einheitlicher.",
+        "en": "Several dashboard views are easier to read now: dense tables are more legible, previously silent loading phases now show a hint, and the sidebar icons look more consistent."
+      },
+      {
+        "de": "Beim Öffnen eines Modells aus einer Tabelle zeigt das Detailfenster jetzt, aus welcher Ansicht es geöffnet wurde.",
+        "en": "Opening a model from a table now shows which view it was opened from in the detail window."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Die eingeblendete Seitenleiste auf MakerWorld konnte auf sehr langen Seiten (viele geladene Modelle) kurz ruckeln, besonders beim Ein-/Ausblenden. Das ist jetzt spürbar flüssiger.",
+        "en": "The overlay panel on MakerWorld could briefly stutter on very long pages (many loaded models), especially when showing/hiding it. This is now noticeably smoother."
+      }
+    ]
+  },
+  {
     "v": "6.3.3",
     "date": "2026-09-23",
     "features": [
