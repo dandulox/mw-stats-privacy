@@ -4,8 +4,8 @@
     "date": "2026-09-23",
     "features": [
       {
-        "de": "Jede Installation bekommt jetzt beim ersten Kontakt mit der Fomio-API ihr eigenes, zufälliges Geheimnis statt eines für alle Installationen gemeinsamen Schlüssels – dadurch lässt sich künftig jede Installation einzeln beurteilen, ohne dass das andere betrifft. Bereits vorhandene Zähler/Reputation dieser Installation starten dabei einmalig neu.",
-        "en": "Each installation now gets its own random secret on first contact with the Fomio API, instead of a key shared by every installation – this means each installation can be judged individually going forward, without affecting others. This installation’s existing counters/reputation restart once as a result."
+        "de": "Jede Installation bekommt jetzt ein eigenes Zugangsgeheimnis statt eines für alle Installationen gemeinsamen Schlüssels – dadurch lässt sich künftig jede Installation einzeln beurteilen, ohne dass das andere betrifft. Bereits vorhandene Zähler/Reputation dieser Installation starten dabei einmalig neu.",
+        "en": "Each installation now gets its own access secret instead of a key shared by every installation – this means each installation can be judged individually going forward, without affecting others. This installation’s existing counters/reputation restart once as a result."
       }
     ],
     "fixes": []
@@ -37,8 +37,8 @@
     "date": "2026-09-23",
     "features": [
       {
-        "de": "Die Fomio-API läuft jetzt auf einem eigenen Server mit echtem HTTPS-Zertifikat unter api.fomio.de statt der bisherigen Test-Adresse im lokalen Netzwerk – alle bisher gesammelten Daten wurden übernommen, es geht nichts verloren.",
-        "en": "The Fomio API now runs on its own server with a real HTTPS certificate at api.fomio.de instead of the previous local-network test address – all data collected so far has been carried over, nothing is lost."
+        "de": "Die Fomio-API läuft jetzt auf einer eigenen, verschlüsselten Serveradresse statt der bisherigen lokalen Testadresse – alle bisher gesammelten Daten wurden übernommen, es geht nichts verloren.",
+        "en": "The Fomio API now runs on its own encrypted server address instead of the previous local test address – all data collected so far has been carried over, nothing is lost."
       }
     ],
     "fixes": []
