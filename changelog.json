@@ -1,5 +1,27 @@
 [
   {
+    "v": "6.1.0",
+    "date": "2026-09-23",
+    "features": [
+      {
+        "de": "Die Fomio-API läuft jetzt auf einem eigenen Server mit echtem HTTPS-Zertifikat unter api.fomio.de statt der bisherigen Test-Adresse im lokalen Netzwerk – alle bisher gesammelten Daten wurden übernommen, es geht nichts verloren.",
+        "en": "The Fomio API now runs on its own server with a real HTTPS certificate at api.fomio.de instead of the previous local-network test address – all data collected so far has been carried over, nothing is lost."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.0.3",
+    "date": "2026-09-23",
+    "features": [
+      {
+        "de": "Die Anmeldung an der Fomio-API läuft jetzt über kurzlebige, an die eigene Installation gebundene Zugangs-Tokens statt eines dauerhaft gültigen Schlüssels – erschwert es, sich als eine fremde Installation auszugeben, rein clientseitig aber technisch nicht vollständig ausschließbar.",
+        "en": "Signing in to the Fomio API now uses short-lived access tokens bound to your own installation instead of a permanently valid key – this makes it harder to impersonate another installation, though it can’t be fully ruled out from a purely client-side extension."
+      }
+    ],
+    "fixes": []
+  },
+  {
     "v": "6.0.2",
     "date": "2026-09-23",
     "features": [
