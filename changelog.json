@@ -1,5 +1,16 @@
 [
   {
+    "v": "6.0.2",
+    "date": "2026-09-23",
+    "features": [
+      {
+        "de": "Echte Keyword-Trends über die Fomio-API: Unter „Langzeit“ zeigt eine neue Karte, welche Tags gerade über alle teilnehmenden Installationen hinweg zunehmen – nicht nur aus der eigenen Erfassung. Dafür werden jetzt auch die (öffentlichen) Tags eines Modells mit übertragen, wenn die Fomio-API aktiviert ist.",
+        "en": "Real keyword trends via the Fomio API: under “Long-term”, a new card shows which tags are currently trending across all participating installations, not just your own data. To make this possible, a model’s (public) tags are now also sent along when the Fomio API is enabled."
+      }
+    ],
+    "fixes": []
+  },
+  {
     "v": "6.0.1",
     "date": "2026-09-23",
     "features": [
