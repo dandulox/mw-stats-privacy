@@ -1,5 +1,16 @@
 [
   {
+    "v": "6.1.1",
+    "date": "2026-09-23",
+    "features": [
+      {
+        "de": "Die Einstellung zur Fomio-API ist jetzt ein einzelner Schalter „Use & Share Public Data“ statt Adress-/Schlüsselfeldern: an heißt, öffentliche Modell-Kennzahlen werden geteilt und du bekommst dafür alle öffentlichen Community-Daten; aus heißt, alles bleibt ausschließlich lokal. Daneben steht eine kurze Zahl, wie viele öffentliche Modell-Einträge du dir gerade entgehen lässt bzw. schon nutzt.",
+        "en": "The Fomio API setting is now a single “Use & Share Public Data” switch instead of address/key fields: on means public model metrics are shared and you get all public community data in return; off means everything stays strictly local. Next to it is a short count of how many public model entries you’re currently missing out on, or already using."
+      }
+    ],
+    "fixes": []
+  },
+  {
     "v": "6.1.0",
     "date": "2026-09-23",
     "features": [
