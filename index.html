@@ -19,7 +19,7 @@
 <body>
 <main>
   <h1><span>MW</span> Stats – Privacy Policy</h1>
-  <p class="mu">Last updated: 19 September 2026 · v3 · Deutsche Fassung unten</p>
+  <p class="mu">Last updated: 23 September 2026 · v6 · Deutsche Fassung unten</p>
 
   <h2>Who we are</h2>
   <p>MW Stats is a browser extension by Fomio (<a href="https://makerworld.com/@fomio">makerworld.com/@fomio</a>). It is an independent project and is not affiliated with Bambu Lab or MakerWorld.</p>
@@ -33,19 +33,23 @@
   <p>The extension does not read passwords, login tokens, payment data, messages or browsing activity outside makerworld.com.</p>
 
   <h2>Where the data is stored</h2>
-  <p>All data is stored <b>locally in your browser</b> (Chrome extension storage and IndexedDB). There is no server. Nothing is sent to Fomio or to any third party.</p>
+  <p>All data is stored <b>locally in your browser</b> (Chrome extension storage and IndexedDB) by default. Since version 6, <b>public model statistics</b> can additionally be shared with Fomio's own server (see "Public data sharing" below) – everything else stays local, and this sharing is off unless you turn it on.</p>
+
+  <h2>Public data sharing (optional, "Use &amp; Share Public Data")</h2>
+  <p>In the settings there is a single switch. When it is <b>on</b>, the extension periodically sends publicly visible model metrics – model ID, download/like/print/collection/comment/rating/boost/view counts and tags – to Fomio's API at <b>api.fomio.de</b> (encrypted via HTTPS), and in return you can see aggregated statistics contributed by other installations (e.g. community trend charts). When it is <b>off</b> ("Stay local"), nothing is sent and nothing is fetched – the extension behaves exactly as a purely local tool.</p>
+  <p>What is <b>never</b> sent, regardless of this setting: your MakerWorld login/session, account details, Creator Center figures, or anything else that is not a publicly visible model statistic. Requests to the API are identified only by a randomly generated installation ID stored in your browser – not by your MakerWorld account, name, or email. This ID cannot be used to identify you personally; it exists only so the server can rate-limit abuse and judge how trustworthy submitted data is.</p>
 
   <h2>Optional automation</h2>
   <p>If you turn the automation on, the extension opens pages of <b>makerworld.com</b> in a single background tab (for example your own uploads, the Creator Center or the home feeds), reads the data shown there and closes the tab again. It is switched off by default, you choose the steps and the schedule, and it never opens any other website.</p>
 
   <h2>Network requests</h2>
-  <p>The extension only makes requests to <b>makerworld.com</b>, the site you are using: to load your own published models and to load missing tags of models shown to you (rate limited). These requests use your existing MakerWorld session, like the website itself does.</p>
+  <p>The extension makes requests to <b>makerworld.com</b> (to load your own published models and missing tags of models shown to you, using your existing session, like the website itself does) and, only if you enabled public data sharing, to <b>api.fomio.de</b> as described above.</p>
 
   <h2>No tracking, no selling</h2>
-  <p>MW Stats contains no analytics, advertising or tracking code. Data is never sold, shared or used for any purpose other than showing you statistics.</p>
+  <p>MW Stats contains no analytics, advertising or tracking code. Data is never sold, shared with third parties, or used for any purpose other than showing you (and, for the data you choose to share, other users) statistics.</p>
 
   <h2>Your control</h2>
-  <p>In the extension settings you can export all data as JSON, delete market data or delete everything. Uninstalling the extension removes all stored data.</p>
+  <p>In the extension settings you can export all data as JSON, delete market data, delete everything, or switch public data sharing on or off at any time. Uninstalling the extension removes all locally stored data (previously shared public model statistics remain on the server, since they are aggregate/anonymous by design and not tied to your identity).</p>
 
   <h2>Contact</h2>
   <p>Questions: via <a href="https://makerworld.com/@fomio">makerworld.com/@fomio</a>.</p>
@@ -53,11 +57,13 @@
   <h2>Datenschutzerklärung (Deutsch)</h2>
   <p>MW Stats ist eine Browser-Erweiterung von Fomio und ein unabhängiges Projekt ohne Verbindung zu Bambu Lab oder MakerWorld.</p>
   <p><b>Verarbeitete Daten:</b> Daten, die makerworld.com beim Surfen ohnehin lädt (z. B. Modelltitel, Tags, Downloads, Likes, Prints, Suchergebnisse, Feeds, Kennzahlen im Creator Center), die Nutzer-ID und der Handle des eingeloggten Accounts (nur um eigene Modelle zu erkennen) sowie deine Einstellungen. Passwörter, Login-Tokens, Zahlungsdaten, Nachrichten oder Aktivitäten außerhalb von makerworld.com werden nicht gelesen.</p>
-  <p><b>Speicherung:</b> ausschließlich lokal in deinem Browser. Es gibt keinen Server; nichts wird an Fomio oder Dritte übertragen.</p>
+  <p><b>Speicherung:</b> standardmäßig ausschließlich lokal in deinem Browser. Seit Version 6 können <b>öffentliche Modell-Kennzahlen</b> zusätzlich mit dem Fomio-Server geteilt werden (siehe „Teilen öffentlicher Daten" unten) – alles andere bleibt lokal, und diese Freigabe ist standardmäßig ausgeschaltet.</p>
+  <p><b>Teilen öffentlicher Daten (optional, „Use &amp; Share Public Data"):</b> In den Einstellungen gibt es einen einzelnen Schalter. Ist er <b>an</b>, sendet die Erweiterung öffentlich sichtbare Modell-Kennzahlen – Modell-ID, Downloads/Likes/Prints/Sammlungen/Kommentare/Bewertungen/Boosts/Views sowie Tags – verschlüsselt (HTTPS) an die Fomio-API unter <b>api.fomio.de</b>, und im Gegenzug siehst du aggregierte Statistiken anderer Installationen (z. B. Community-Trends). Ist er <b>aus</b> („Stay local"), wird nichts gesendet und nichts abgerufen – die Erweiterung verhält sich wie ein rein lokales Werkzeug.</p>
+  <p>Unabhängig von dieser Einstellung <b>niemals</b> übertragen: dein MakerWorld-Login bzw. deine Session, Account-Details, Creator-Center-Kennzahlen oder alles, was keine öffentlich sichtbare Modell-Kennzahl ist. Anfragen an die API werden nur über eine zufällig erzeugte, lokal gespeicherte Installations-ID identifiziert – nicht über deinen MakerWorld-Account, Namen oder E-Mail. Diese ID lässt keinen Rückschluss auf deine Person zu; sie dient ausschließlich dazu, Missbrauch zu begrenzen und die Vertrauenswürdigkeit gemeldeter Daten einzuschätzen.</p>
   <p><b>Optionale Automatisierung:</b> Wenn du die Automatisierung einschaltest, öffnet die Erweiterung Seiten von makerworld.com in einem einzelnen Hintergrund-Tab (z. B. deine Uploads, das Creator Center oder die Startseiten-Feeds), liest die dort angezeigten Daten und schließt den Tab wieder. Sie ist standardmäßig aus, du legst Schritte und Zeitplan selbst fest, und es werden keine anderen Websites geöffnet.</p>
-  <p><b>Netzwerkanfragen:</b> nur an makerworld.com, um deine eigenen Modelle und fehlende Tags angezeigter Modelle zu laden (gedrosselt), mit deiner bestehenden MakerWorld-Sitzung.</p>
-  <p><b>Kein Tracking, kein Verkauf:</b> keine Analyse-, Werbe- oder Tracking-Dienste. Daten werden nie verkauft oder weitergegeben.</p>
-  <p><b>Kontrolle:</b> In den Einstellungen kannst du alle Daten als JSON exportieren oder löschen. Beim Deinstallieren werden alle Daten entfernt.</p>
+  <p><b>Netzwerkanfragen:</b> an makerworld.com (eigene Modelle und fehlende Tags angezeigter Modelle, gedrosselt, mit deiner bestehenden Sitzung) sowie – nur bei aktivierter Freigabe öffentlicher Daten – an api.fomio.de wie oben beschrieben.</p>
+  <p><b>Kein Tracking, kein Verkauf:</b> keine Analyse-, Werbe- oder Tracking-Dienste. Daten werden nie verkauft oder an Dritte weitergegeben.</p>
+  <p><b>Kontrolle:</b> In den Einstellungen kannst du alle Daten als JSON exportieren, löschen oder die Freigabe öffentlicher Daten jederzeit an-/ausschalten. Beim Deinstallieren werden alle lokal gespeicherten Daten entfernt (bereits geteilte öffentliche Modell-Kennzahlen bleiben auf dem Server, da sie aggregiert/anonym sind und nicht mit deiner Identität verknüpft werden).</p>
 </main>
 </body>
 </html>
