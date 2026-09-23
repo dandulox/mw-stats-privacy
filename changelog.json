@@ -1,0 +1,369 @@
+[
+  {
+    "v": "6.0.1",
+    "date": "2026-09-23",
+    "features": [
+      {
+        "de": "Fremde Modelle nutzen beim Sammelabruf jetzt eine Lese-Reihenfolge: erst der eigene Cache, dann die zentrale Fomio-API, erst danach ein direkter Abruf bei MakerWorld – das spart Anfragen und liefert dort, wo schon Daten von anderen Installationen vorliegen, sofort einen Community-Trend im Modell-Fenster (fremde Modelle).",
+        "en": "Fetching stats for other creators’ models now follows a read order: local cache first, then the central Fomio API, only then a direct MakerWorld request – this saves requests and, where other installations already contributed data, immediately shows a community trend in the model window (other creators’ models)."
+      },
+      {
+        "de": "Das Changelog wird jetzt zusätzlich online abgeglichen, damit auch ältere installierte Versionen die neuesten Einträge sehen, ohne selbst aktualisiert zu werden.",
+        "en": "The changelog is now additionally synced online, so older installed versions can see the latest entries without being updated themselves."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Aufrufzahlen wurden bei Modellen aus Such-/Feed-Ergebnissen fälschlich als „0“ statt als „nicht erfasst“ gespeichert, weil MakerWorld dieses Feld dort grundsätzlich leer lässt. Betroffen sind nur Modelle, deren Aufrufzahlen ausschließlich aus diesen Listen stammen; auf der Modellseite selbst war der Wert schon korrekt.",
+        "en": "View counts for models from search/feed results were incorrectly stored as “0” instead of “not recorded”, because MakerWorld always leaves this field empty there. Only affects models whose view counts came solely from those lists; the value was already correct on the model page itself."
+      }
+    ]
+  },
+  {
+    "v": "6.0.0",
+    "date": "2026-09-23",
+    "features": [
+      {
+        "de": "Vorbereitung einer zentralen Datenbasis: Öffentliche Modell-Kennzahlen (Downloads, Likes, Views, …) können jetzt optional zusätzlich an eine zentrale Fomio-Test-API gesendet werden, damit Trends langfristig über alle Nutzer:innen hinweg ausgewertet werden können. Standardmäßig ist die Übertragung ausgeschaltet und lässt sich unter Einstellungen → „Fomio API (Testbetrieb)“ aktivieren.",
+        "en": "Groundwork for a shared data pool: public model metrics (downloads, likes, views, …) can now optionally also be sent to a central Fomio test API, so trends can eventually be analysed across all users. Transmission is off by default and can be enabled under Settings → “Fomio API (test mode)”."
+      },
+      {
+        "de": "Private Creator-Center-Daten, Account- und Session-Informationen bleiben davon vollständig unberührt – sie werden technisch getrennt gehalten und niemals in die Übertragungs-Warteschlange gelegt.",
+        "en": "Private Creator Center data, account and session information are entirely unaffected – they are kept technically separate and never placed in the upload queue."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "5.0.0",
+    "date": "2026-09-22",
+    "features": [
+      {
+        "de": "Wird mein Modell verkauft? Die Modellseite hat einen neuen Reiter „Bildsuche“, der den Modelltitel direkt in der Suche von Etsy, eBay, Amazon, AliExpress, Temu, Kleinanzeigen und in Shopify-Shops nachschlägt – und zusätzlich eine gemeinsame Abfrage über Google. Der Suchbegriff wird dabei bereinigt: Verkäufer übernehmen selten den vollen Titel, deshalb fallen Wörter wie „3D“, „STL“, „support free“ oder Versionsnummern weg.",
+        "en": "Is my model being sold? The model page has a new “Image search” tab that looks up the model title directly in the search of Etsy, eBay, Amazon, AliExpress, Temu, Kleinanzeigen and Shopify shops – plus a combined query via Google. The search term is cleaned up first: sellers rarely keep the full title, so words like “3D”, “STL”, “support free” or version numbers are dropped."
+      },
+      {
+        "de": "Rückwärts-Bildsuche des Titelbilds bei Yandex, Google Lens und Bing – in voller Auflösung statt der verkleinerten Vorschau. Eine Eingrenzung auf eine bestimmte Verkaufsplattform ist dabei technisch nicht möglich; Yandex findet wiederverwendete Produktfotos erfahrungsgemäß am zuverlässigsten und steht deshalb an erster Stelle.",
+        "en": "Reverse image search of the cover image on Yandex, Google Lens and Bing – at full resolution instead of the scaled-down preview. Restricting it to a particular marketplace is not technically possible; Yandex tends to find reused product photos most reliably and therefore comes first."
+      },
+      {
+        "de": "Suche nach Nachbauten auf Printables, Thingiverse, Cults3D, MyMiniFactory und Thangs – einzeln, gemeinsam oder ohne Einschränkung. Im Modell-Fenster des Dashboards liegen dieselben Möglichkeiten als Knopfreihe.",
+        "en": "Search for reposts on Printables, Thingiverse, Cults3D, MyMiniFactory and Thangs – individually, combined or unrestricted. The same options are available as a row of buttons in the dashboard’s model window."
+      },
+      {
+        "de": "In den Einstellungen lassen sich die Plattformliste, der bevorzugte Bilddienst und die Länder-Adressen von eBay und Amazon festlegen.",
+        "en": "The settings let you configure the platform list, the preferred image service and the country domains for eBay and Amazon."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "4.0.0",
+    "date": "2026-09-21",
+    "features": [
+      {
+        "de": "Die Modelle liegen jetzt in einer echten Datenbank (IndexedDB) statt im Erweiterungsspeicher. Beim ersten Start ziehen alle vorhandenen Daten automatisch um – Modelle, Messpunkte, Tags und Tag-Verlauf bleiben vollständig erhalten. Der alte Speicherplatz wird erst geleert, nachdem der Umzug geprüft wurde; schlägt er fehl, bleibt alles unverändert und wird beim nächsten Start erneut versucht.",
+        "en": "Models are now kept in a real database (IndexedDB) instead of extension storage. On first start all existing data migrates automatically – models, measurement points, tags and tag history are preserved in full. The old storage is only cleared after the migration has been verified; if it fails, everything stays as it was and is retried on the next start."
+      },
+      {
+        "de": "Gespeichert wird nur noch das einzelne geänderte Modell statt der gesamten Tabelle. Bei 12.000 Modellen sind das rund 2 Millisekunden pro Schreibvorgang – vorher wurde die komplette Tabelle geschrieben und zusätzlich an jeden offenen MakerWorld-Tab verteilt.",
+        "en": "Only the single changed model is written now instead of the entire table. With 12,000 models that is about 2 milliseconds per write – previously the whole table was written and additionally broadcast to every open MakerWorld tab."
+      },
+      {
+        "de": "Ältere Modelle gehen nicht mehr verloren: Bisher wurden Einträge über der Obergrenze gelöscht. Jetzt bleiben sie in der Datenbank und werden nur nicht mehr im Arbeitsspeicher gehalten – die Langzeitauswertung gewinnt dadurch an Tiefe.",
+        "en": "Older models are no longer lost: entries above the limit used to be deleted. They now stay in the database and are merely dropped from memory – which gives the long-term analysis more depth."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Sicherungen aus älteren Versionen führen die Modelle im Erweiterungsspeicher. Sie werden beim Einlesen automatisch in die Datenbank übernommen.",
+        "en": "Backups from older versions keep the models in extension storage. They are transferred into the database automatically on import."
+      },
+      {
+        "de": "Das Löschen fremder Modelle und das vollständige Zurücksetzen in den Einstellungen räumen jetzt auch die Datenbank auf.",
+        "en": "Deleting other creators’ models and the full reset in the settings now clear the database as well."
+      }
+    ]
+  },
+  {
+    "v": "3.1.0",
+    "date": "2026-09-21",
+    "features": [
+      {
+        "de": "Tempo-Überarbeitung: MakerWorld-Seiten werden spürbar weniger belastet. Die Seitenleiste lädt ihre Vergleichsdaten jetzt als kompakten Abzug ohne Verlaufswerte über den Hintergrundprozess und nur dann neu, wenn sich wirklich etwas geändert hat. Gemessen an einer Datenbank mit 12.000 Modellen: 3,8 statt 13,8 MB beim Seitenaufruf, und statt eines vollen Datenabgleichs pro Minute fallen im Leerlauf nur noch wenige Byte an.",
+        "en": "Performance rework: MakerWorld pages are noticeably less burdened. The sidebar now loads its reference data as a compact snapshot without history values through the background process, and only reloads when something actually changed. Measured against a database of 12,000 models: 3.8 instead of 13.8 MB per page load, and instead of a full data sync every minute, an idle tab now transfers only a few bytes."
+      },
+      {
+        "de": "Hintergrundtabs arbeiten nicht mehr mit: Solange ein Tab verdeckt ist, wird nichts nachgeladen. Auf Seiten ohne Auswertung werden die Vergleichsdaten gar nicht erst geholt.",
+        "en": "Background tabs stay idle: nothing is reloaded while a tab is hidden. On pages without an analysis, the reference data is not fetched at all."
+      },
+      {
+        "de": "Gespeichert wird nur noch, was sich geändert hat, und seltener gebündelt statt im Sekundentakt.",
+        "en": "Only changed data is written now, bundled less frequently instead of every couple of seconds."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Die Extension hörte in jedem MakerWorld-Tab auf Speicheränderungen. Dadurch schickte Chrome bei jedem Schreibvorgang die komplette Modelltabelle in jeden offenen Tab. Der Hintergrundprozess meldet Änderungen jetzt mit einer kurzen Nachricht.",
+        "en": "The extension listened for storage changes in every MakerWorld tab, so Chrome copied the entire model table into every open tab on each write. The background process now reports changes with a short message instead."
+      },
+      {
+        "de": "Die Meldung über gefolgte Creator blieb ohne Antwort, wodurch der Aufrufer ins Leere wartete.",
+        "en": "The message about followed creators was never answered, leaving the caller waiting."
+      },
+      {
+        "de": "Der Upload-Assistent beobachtete die ganze Seite auf Textänderungen und reagierte damit auf jeden Tastenanschlag doppelt. Jetzt wird nur noch das Tag-Feld beobachtet.",
+        "en": "The upload assistant watched the whole page for text changes and therefore reacted to every keystroke twice. Only the tag field is watched now."
+      },
+      {
+        "de": "Das Aufräumen der Datenbank lief bei jedem erfassten Modell über den gesamten Bestand – jetzt höchstens einmal pro Minute.",
+        "en": "Database cleanup ran across all records for every captured model – now at most once a minute."
+      }
+    ]
+  },
+  {
+    "v": "3.0.8",
+    "date": "2026-09-20",
+    "features": [],
+    "fixes": [
+      {
+        "de": "Erklärungstexte unter den Tabellen entfernt – bei den Saison-Signalen, im Upload-Assistenten und in der Diagnose. Die Ansichten zeigen nur noch Daten.",
+        "en": "Removed the explanatory paragraphs below the tables – in the season signals, the upload assistant and the diagnostics. The views now show data only."
+      }
+    ]
+  },
+  {
+    "v": "3.0.7",
+    "date": "2026-09-20",
+    "features": [
+      {
+        "de": "Trend-Erkennung bei den Saison-Signalen: „Kommt gerade besonders viel“ zeigt die Tags, bei denen die gefolgten Creator in den letzten 7 Tagen deutlich mehr hochgeladen haben als in der Woche davor. In der Tabelle gibt es dafür die Spalte „7 T“ mit Pfeil zum Vorwochenvergleich und die Markierung „Schub“.",
+        "en": "Trend detection for the season signals: “Coming in especially fast right now” shows the tags where creators you follow uploaded clearly more in the last 7 days than in the week before. The table adds a “7 d” column with an arrow comparing to the previous week, plus a “Surge” marker."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Die Tabelle der Saison-Signale war schlecht lesbar: Die Tag-Spalte ist jetzt breiter, die Zahlenspalten sind schmaler und brechen nicht mehr um.",
+        "en": "The season-signal table was hard to read: the tag column is wider now, the number columns are narrower and no longer wrap."
+      }
+    ]
+  },
+  {
+    "v": "3.0.6",
+    "date": "2026-09-20",
+    "features": [
+      {
+        "de": "Gefolgte Creator werden getrennt ausgewertet: Auf der Following-Seite zeigt die Seitenleiste, worauf die Konkurrenz gerade setzt – Tags, die in ihren neuen Uploads auftauchen, in ihren älteren Modellen aber nicht vorkamen, mit dem Datum des ersten Uploads. So siehst du, wann jemand anfängt, in eine neue Saison zu investieren. Dazu die neuesten Uploads, wer gerade aktiv ist und alle Tags dieser Creator.",
+        "en": "Creators you follow are analysed separately: on the Following page the sidebar shows what the competition is betting on – tags that appear in their new uploads but were absent from their older models, with the date of the first upload. That tells you when someone starts investing in a new season. Plus the latest uploads, who is active right now and all tags of those creators."
+      },
+      {
+        "de": "Dashboard-Seite „Gefolgte Creator“ mit Saison-Signalen, Uploads je Woche und Creator-Aktivität; der Zeitraum für „neu“ ist zwischen 14 und 90 Tagen umstellbar.",
+        "en": "Dashboard page “Creators you follow” with season signals, uploads per week and creator activity; the window for “new” can be set between 14 and 90 days."
+      },
+      {
+        "de": "Einstellung „Gefolgte Creator getrennt auswerten“ – abgeschaltet wird die Following-Seite wie jeder andere Feed behandelt.",
+        "en": "Setting “Analyse creators you follow separately” – switched off, the Following page is treated like any other feed."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "3.0.5",
+    "date": "2026-09-20",
+    "features": [
+      {
+        "de": "Upload-Assistent: Beim Hochladen und Bearbeiten eines Modells liest die Seitenleiste Titel, Beschreibung und Tags live mit und schlägt passende Keywords vor – Begriffe aus deinem Beschreibungstext, die gesucht werden und als Tag fehlen, Tags erfolgreicher Modelle derselben Nische, Wörter, die nur im Titel stehen, und Tags ohne erkennbare Nachfrage. Dazu Chance je Begriff, ein Ähnlichkeits-Check gegen vorhandene Modelle und ein Klick zum Kopieren. Es wird nichts in die Maske geschrieben und nichts verschickt.",
+        "en": "Upload assistant: while you upload or edit a model, the sidebar reads title, description and tags live and suggests matching keywords – terms from your description text that people search for but that are missing as tags, tags of successful models in the same niche, words that only appear in the title, and tags with no detectable demand. Plus a chance score per term, a similarity check against existing models and click-to-copy. Nothing is written into the form and nothing is sent anywhere."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Sätze mit eingesetzten Zahlen wurden in der englischen Oberfläche teilweise deutsch angezeigt, weil einzelne Wörter vor dem ganzen Satz ersetzt wurden.",
+        "en": "Sentences containing numbers were partly shown in German in the English interface because single words were replaced before the whole sentence."
+      }
+    ]
+  },
+  {
+    "v": "3.0.4",
+    "date": "2026-09-20",
+    "features": [],
+    "fixes": [
+      {
+        "de": "Punkte wurden unvollständig gezählt: MakerWorld führt normale und exklusive Punkte als getrennte Reihen, angezeigt wurde nur eine davon. Beide werden jetzt je Tag addiert – in den Kennzahlen, im Reiter auf dem eigenen Profil und in den Creator-Center-Tageswerten. Liefert MakerWorld zusätzlich eine eigene Summenreihe, wird sie ausgelassen, damit nichts doppelt zählt.",
+        "en": "Points were counted incompletely: MakerWorld keeps normal and exclusive points as separate series and only one of them was shown. Both are now added up per day – in the metrics, in the tab on your own profile and in the Creator Center daily values. If MakerWorld also supplies its own total series, it is skipped so nothing is counted twice."
+      }
+    ]
+  },
+  {
+    "v": "3.0.3",
+    "date": "2026-09-20",
+    "features": [],
+    "fixes": [
+      {
+        "de": "Die Knöpfe „Hinterlasse einen Boost auf unseren Modellen“ und „Unterstütze uns auf Patreon“ blieben in der deutschen Oberfläche englisch. Sie werden jetzt mitübersetzt – in der Seitenleiste, im Dashboard, in den Einstellungen, im Popup und in der Einrichtung.",
+        "en": "The buttons “Leave a boost on our models” and “Support us on Patreon” stayed English in the German interface. They are translated now – in the sidebar, dashboard, settings, popup and setup."
+      },
+      {
+        "de": "Lange Beschriftungen liefen im Dashboard über den Knopfrand hinaus. Die Knöpfe brechen den Text jetzt um, statt ihn abzuschneiden.",
+        "en": "Long labels ran past the button edge in the dashboard. Buttons now wrap their text instead of cutting it off."
+      }
+    ]
+  },
+  {
+    "v": "3.0.2",
+    "date": "2026-09-20",
+    "features": [
+      {
+        "de": "Ausführliche Einrichtung: Sechs Schritte erklären jetzt, welche Auswertung auf welcher MakerWorld-Seite erscheint, wie die Account-Erkennung arbeitet, was die Automatisierung im Hintergrund genau tut und wo deine Daten liegen. Die Schritte lassen sich jederzeit über die Einstellungen erneut öffnen.",
+        "en": "Detailed setup: six steps now explain which analysis appears on which MakerWorld page, how account detection works, what the automation actually does in the background and where your data is kept. The steps can be reopened at any time from the settings."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "3.0.1",
+    "date": "2026-09-20",
+    "features": [],
+    "fixes": [
+      {
+        "de": "Sicherheitsüberarbeitung: Die gesamte Anzeige läuft jetzt über eine einzige, geprüfte Stelle, an der Texte maskiert werden. Damit ist nachvollziehbar, dass keine fremden Inhalte als Code ausgeführt werden können.",
+        "en": "Security rework: all display output now goes through a single, audited place where text is escaped. This makes it verifiable that no foreign content can be executed as code."
+      }
+    ]
+  },
+  {
+    "v": "3.0.0",
+    "date": "2026-09-20",
+    "features": [
+      {
+        "de": "Launch Studio: Prüfe ein geplantes Modell vor dem Hochladen – Nachfrage und Konkurrenz je Suchbegriff, Chance-Score, Tag- und Titelvorschläge sowie ein Duplikat-Check gegen vorhandene Modelle.",
+        "en": "Launch Studio: check a planned model before you upload it – demand and competition per search term, a chance score, tag and title suggestions, and a duplicate check against existing models."
+      },
+      {
+        "de": "Modell-Fenster: Ein Klick auf ein Modell öffnet alle Kennzahlen mit Titelbild, Verlaufsgraphen, Marktvergleich, Keyword-Trends und einem Knopf zu MakerWorld.",
+        "en": "Model window: clicking a model opens all its metrics with cover image, history charts, market comparison, keyword trends and a button to MakerWorld."
+      },
+      {
+        "de": "Kennzahlen-Seite: Follower, Downloads, Prints, Sammlungen, Aufrufe, Likes und Punkte als Graphen – im Dashboard und als Reiter auf dem eigenen Profil, jeweils über das Zahnrad ein- und ausschaltbar.",
+        "en": "Metrics page: followers, downloads, prints, collections, views, likes and points as charts – in the dashboard and as a tab on your own profile, each switchable via the gear."
+      },
+      {
+        "de": "Turbo-Modus: Einmal pro Tag bis zu 1000 schnelle Abrufe (50 ms) für fehlende Tags, mit eigenem Kontingent und automatischem Stopp, falls MakerWorld bremst.",
+        "en": "Turbo mode: up to 1000 fast requests (50 ms) per day for missing tags, with its own quota and an automatic stop if MakerWorld throttles."
+      },
+      {
+        "de": "Sicherung: Komplette Datenbank und alle Einstellungen als Datei exportieren und wieder importieren – wahlweise zusammenführen oder ersetzen.",
+        "en": "Backup: export the complete database and all settings to a file and import them again – either merged or replacing existing data."
+      },
+      {
+        "de": "Modell- und Druckprofil-Werte werden getrennt gezählt. Downloads und Drucke der Druckprofile fließen nicht mehr in die Modellwerte ein.",
+        "en": "Model and print-profile figures are counted separately. Downloads and prints of print profiles no longer flow into the model figures."
+      },
+      {
+        "de": "Automatisierung: Routen Schritt für Schritt bearbeiten, einzelne Schritte testen, nach Zeitplan laufen lassen – inklusive Sammelabruf für aktuelle Statistiken.",
+        "en": "Automation: edit routes step by step, test single steps, run them on a schedule – including a batch request for up-to-date statistics."
+      },
+      {
+        "de": "Geführte Einrichtung beim ersten Start und eigene Tags als Beobachtungsliste.",
+        "en": "Guided setup on first start, plus custom tags as a watch list."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Beliebte Suchen wurden nicht erkannt, wenn einzelne Einträge der Liste leer waren. Jetzt genügen 80 % gültige Einträge.",
+        "en": "Popular searches were not detected when single list entries were empty. 80 % valid entries are now enough."
+      },
+      {
+        "de": "Eigene Modelle wurden über eine Adresse geladen, die MakerWorld mit Fehler 400 beantwortet. Fehlversuche galten trotzdem als erledigt, sodass sechs Stunden lang nichts nachgeladen wurde.",
+        "en": "Own models were loaded from an address MakerWorld answers with error 400. Failed attempts still counted as done, so nothing was loaded for six hours."
+      },
+      {
+        "de": "Bewertungen fehlten: MakerWorld zählt sie je Druckprofil. Sie werden jetzt über alle Profile summiert, inklusive Durchschnitt.",
+        "en": "Ratings were missing: MakerWorld counts them per print profile. They are now summed across all profiles, including the average."
+      },
+      {
+        "de": "Stopp der Automatisierung wirkte erst nach dem laufenden Schritt. Jetzt bricht der Lauf sofort ab und der Hintergrund-Tab wird geschlossen.",
+        "en": "Stopping the automation only took effect after the current step. The run now aborts immediately and the background tab is closed."
+      },
+      {
+        "de": "Nach einem abgebrochenen Lauf blieb die Anzeige dauerhaft auf „Läuft: Schritt …“ stehen.",
+        "en": "After an aborted run the display stayed on “Running: step …” forever."
+      },
+      {
+        "de": "Englische Oberfläche zeigte einzelne deutsche Texte, weil einzelne Wörter vor ganzen Sätzen ersetzt wurden.",
+        "en": "The English interface showed some German texts because single words were replaced before whole sentences."
+      },
+      {
+        "de": "Klick auf einen Modellnamen im Dashboard öffnete MakerWorld statt des Modell-Fensters.",
+        "en": "Clicking a model name in the dashboard opened MakerWorld instead of the model window."
+      },
+      {
+        "de": "Tooltips in Diagrammen wurden am rechten Rand abgeschnitten.",
+        "en": "Chart tooltips were cut off at the right edge."
+      },
+      {
+        "de": "Tabellen in der Seitenleiste waren breiter als das Panel, dadurch fehlten Spalten und Tag-Namen.",
+        "en": "Tables in the sidebar were wider than the panel, hiding columns and tag names."
+      },
+      {
+        "de": "Tageslimit war zu früh erreicht, weil auch fehlgeschlagene Anfragen mitgezählt wurden.",
+        "en": "The daily limit was reached too early because failed requests were counted as well."
+      },
+      {
+        "de": "Zeitpläne scheiterten ohne die Berechtigung „alarms“ und legten dabei den ganzen Hintergrundprozess lahm.",
+        "en": "Schedules failed without the “alarms” permission and took down the whole background process."
+      },
+      {
+        "de": "Dashboard und Popup konnten mit leeren Daten abstürzen, wenn der Hintergrundprozess noch nicht bereit war.",
+        "en": "Dashboard and popup could crash with empty data while the background process was not ready yet."
+      }
+    ]
+  },
+  {
+    "v": "2.0.0",
+    "date": "2026-09-19",
+    "features": [
+      {
+        "de": "Automatisierung mit Routen-Editor: Uploads, Creator Center, beliebte Suchen, Startseiten-Feeds und Suchbegriffe in einem Hintergrund-Tab abrufen.",
+        "en": "Automation with a route editor: fetch uploads, Creator Center, popular searches, home feeds and search terms in a background tab."
+      },
+      {
+        "de": "Onboarding beim ersten Start mit Sprache, Account-Erkennung und Auswahl einer Automatisierungs-Vorlage.",
+        "en": "Onboarding on first start with language, account detection and a choice of automation template."
+      },
+      {
+        "de": "Beobachtete Tags mit eigener Übersicht.",
+        "en": "Watched tags with their own overview."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Tags werden zuerst aus der lokalen Datenbank gelesen, statt sie erneut zu laden.",
+        "en": "Tags are read from the local database first instead of being loaded again."
+      }
+    ]
+  },
+  {
+    "v": "1.0.0",
+    "date": "2026-09-19",
+    "features": [
+      {
+        "de": "Erste Veröffentlichung: Seitenleiste auf MakerWorld mit Such-, Feed-, Modell- und Creator-Analyse.",
+        "en": "First release: sidebar on MakerWorld with search, feed, model and creator analysis."
+      },
+      {
+        "de": "Dashboard mit eigenen Modellen, Engagement-Verhältnissen, Tag-Trends und Langzeit-Datenbank.",
+        "en": "Dashboard with your own models, engagement ratios, tag trends and a long-term database."
+      },
+      {
+        "de": "Beliebte Suchen im Vergleich mit den eigenen Modellen.",
+        "en": "Popular searches compared with your own models."
+      },
+      {
+        "de": "Deutsch und Englisch, heller und dunkler Modus.",
+        "en": "German and English, light and dark mode."
+      }
+    ],
+    "fixes": []
+  }
+]
