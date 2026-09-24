@@ -1,5 +1,16 @@
 [
   {
+    "v": "6.4.2",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Neue und stark nachgefragte öffentliche Modelldaten werden jetzt bevorzugt aktuell gehalten, ältere, wenig aktive Modelle seltener – die Community-Daten sollten dadurch insgesamt frischer wirken.",
+        "en": "New and highly active public model data is now kept up to date more often, while older, less active models are refreshed less frequently – community data should feel fresher overall as a result."
+      }
+    ],
+    "fixes": []
+  },
+  {
     "v": "6.4.1",
     "date": "2026-09-24",
     "features": [
