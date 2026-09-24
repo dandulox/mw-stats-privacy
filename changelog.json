@@ -1,5 +1,212 @@
 [
   {
+    "v": "6.13.1",
+    "date": "2026-09-24",
+    "fixes": [
+      {
+        "de": "Der „Speichern\"-Button in den Einstellungen war komplett kaputt (ein JavaScript-Fehler brach jeden Klick ab, noch bevor irgendetwas gespeichert wurde) – betraf alle Einstellungen, nicht nur die Sprache.",
+        "en": "The “Save” button in Settings was completely broken (a JavaScript error aborted every click before anything was saved) – affected all settings, not just the language."
+      }
+    ],
+    "features": []
+  },
+  {
+    "v": "6.13.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Drei weitere Sprachen: Italienisch, Portugiesisch und Niederländisch, nach demselben Muster wie die bisherigen (Kernbereiche übersetzt, Rest fällt auf Englisch zurück). Damit stehen jetzt 9 Sprachen zur Auswahl.",
+        "en": "Three more languages: Italian, Portuguese, and Dutch, following the same pattern as before (core areas translated, the rest falls back to English). That brings the total to 9 selectable languages."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.12.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Zwei weitere Sprachen: Türkisch und Polnisch, nach demselben Muster wie Französisch/Spanisch (Kernbereiche übersetzt, Rest fällt auf Englisch zurück).",
+        "en": "Two more languages: Turkish and Polish, following the same pattern as French/Spanish (core areas translated, the rest falls back to English)."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.11.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Zwei neue Sprachen: Französisch und Spanisch (auswählbar unter Einstellungen bzw. im Onboarding). Die am häufigsten sichtbaren Texte (Navigation, Tabs, Buttons, Punkte-Bereich) sind übersetzt, seltener sichtbare Texte fallen vorerst auf Englisch zurück und werden nach und nach ergänzt.",
+        "en": "Two new languages: French and Spanish (selectable in Settings or during onboarding). The most frequently visible text (navigation, tabs, buttons, points section) is translated; less common text falls back to English for now and will be filled in gradually."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.10.1",
+    "date": "2026-09-24",
+    "fixes": [
+      {
+        "de": "DL/Like und Prints/DL auf den Modellkarten wurden je nach Größe des Werts mal als Dezimalzahl (z. B. „1.43\"), mal als Prozent (z. B. „80.0 %\") angezeigt – schwer vergleichbar. Beide zeigen jetzt einheitlich Prozent.",
+        "en": "DL/like and prints/DL on model cards were shown either as a decimal (e.g. “1.43”) or as a percentage (e.g. “80.0%”) depending on the value’s size – hard to compare. Both now consistently show percentages."
+      }
+    ],
+    "features": []
+  },
+  {
+    "v": "6.10.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Für Downloads-Stufen ohne eigene Stichproben (sehr große Modelle) wird die Punkte-Schätzung jetzt aus dem Trend der bekannten Stufen abgeschwächt hochgerechnet, statt komplett zu fehlen oder den groben Gesamtdurchschnitt zu nehmen – als „(grob)“ gekennzeichnet.",
+        "en": "For download tiers without their own samples (very large models), the points estimate is now extrapolated from the trend of the known tiers with a decay factor, instead of being missing entirely or using the crude overall average – marked as “(rough)”."
+      },
+      {
+        "de": "Neuer Tab „Punkte\" direkt auf der Modellseite: zeigt die geschätzte Punkte-Spanne dieses Modells sowie eine Tabelle, wie viele echte Stichproben je Downloads-Stufe vorliegen.",
+        "en": "New “Points” tab directly on the model page: shows this model’s estimated points range plus a table of how many real samples exist per download tier."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.9.1",
+    "date": "2026-09-24",
+    "fixes": [
+      {
+        "de": "Sehr große Modelle (weit über der größten Downloads-Stufe, für die wir Daten haben) konnten eine absurd hohe Punkte-Schätzung bekommen, weil der Rest einfach mit dem groben Gesamtdurchschnitt hochgerechnet wurde. Die Anzeige zeigt jetzt lieber gar nichts, wenn der Großteil der Schätzung reine Extrapolation wäre, statt eine falsch-präzise Zahl.",
+        "en": "Very large models (far beyond the biggest download tier we have data for) could get an absurdly high points estimate because the remainder was simply extrapolated using the crude overall average. The display now shows nothing rather than a falsely precise number when most of the estimate would be pure extrapolation."
+      }
+    ],
+    "features": []
+  },
+  {
+    "v": "6.9.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Die Punkte-Schätzung auf Modellkarten zeigt jetzt eine Spanne (z. B. „~20–60 Punkte\") statt einer scheinbar exakten Zahl – ehrlicher, weil MakerWorld offenbar in Schwellen-Schüben statt kontinuierlich auszahlt und gerade bei kleinen/neuen Modellen eine einzelne Zahl leicht daneben liegen kann.",
+        "en": "The points estimate on model cards now shows a range (e.g. “~20–60 points”) instead of a seemingly exact number – more honest, since MakerWorld appears to pay out in threshold-based batches rather than continuously, and a single number can be noticeably off especially for small/new models."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.8.3",
+    "date": "2026-09-24",
+    "features": [],
+    "fixes": [
+      {
+        "de": "Karten-Badges (DL/Like, Prints/DL, Punkte-Schätzung) wurden seit der letzten Version auf keiner Seite mehr angezeigt – ein Zeilenverlust beim Umbauen hatte den Inhalt der Anzeige leer bleiben lassen. Wieder da.",
+        "en": "Card badges (DL/like, prints/DL, points estimate) stopped showing up anywhere since the last version – a lost line during a rewrite left the display content empty. Fixed."
+      }
+    ]
+  },
+  {
+    "v": "6.8.2",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Die „~X Punkte erhalten\"-Anzeige auf Modellkarten ist wieder da – jetzt auf Basis der robusteren Lifetime-Modell-Zusammenfassungen statt der schwankenden Tages-Buchungen, dadurch deutlich realistischere Werte als zuvor.",
+        "en": "The “~X points received” display on model cards is back – now based on the more robust lifetime model summaries instead of the fluctuating daily bookings, giving noticeably more realistic values than before."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.8.1",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Einstellungen zeigen jetzt auch die Warteschlange der neuen Modell-Zusammenfassungen an, mit eigenem Übertragen-Knopf – zum Nachvollziehen, ob die Erfassung ankommt.",
+        "en": "Settings now also show the queue for the new model summaries, with its own transmit button – to help verify whether the capture is working."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.8.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Neue, deutlich robustere Datenquelle für die Punkte-Schätzung: beim Betrachten der Modell-Statistik im Creator Center wird jetzt (nur bei aktivierter Punkte-Zustimmung) die Lifetime-Punktesumme des jeweiligen Modells mit erfasst – umgeht das unregelmäßige, schubweise Auszahlungsverhalten von MakerWorld, das die bisherige tagesbasierte Schätzung teils stark verzerrt hat.",
+        "en": "New, much more robust data source for the points estimate: viewing a model’s statistics in the Creator Center now also captures (only with points consent enabled) that model’s lifetime point total – this sidesteps MakerWorld’s irregular, batched payout behavior, which had significantly skewed the previous day-based estimate in some cases."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Die „~X Punkte erhalten\"-Anzeige auf Modellkarten ist vorübergehend deaktiviert: reale Daten zeigten, dass die tägliche Modell-/Profil-Prämie nicht proportional zu Downloads/Prints an dem Tag ist, wodurch die bisherige Hochrechnung teils deutlich zu hoch lag. Kommt zurück, sobald die neue Lifetime-Datenquelle genug Stichproben hat.",
+        "en": "The “~X points received” display on model cards is temporarily disabled: real data showed the daily model/profile bonus is not proportional to that day’s downloads/prints, which made the previous extrapolation significantly too high in some cases. Will return once the new lifetime data source has enough samples."
+      }
+    ]
+  },
+  {
+    "v": "6.7.1",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Die Punkte-Schätzung auf Modellkarten rechnet jetzt stufenweise über alle Downloads-Größenstufen statt mit einer einzigen Rate – trifft den bisherigen Verlauf eines gewachsenen Modells damit deutlich genauer.",
+        "en": "The points estimate on model cards now calculates step by step across all download-size tiers instead of using a single rate – matching the actual history of a model that has grown over time much more closely."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Englische Übersetzung für alle neuen Punkte-Texte (Onboarding, Einstellungen, Dashboard) ergänzt – vorher fehlten die Einträge, wodurch einzelne bekannte Wörter mitten in deutschen Sätzen übersetzt wurden.",
+        "en": "Added English translations for all new points-related text (onboarding, settings, dashboard) – previously missing, which caused isolated known words to get translated in the middle of otherwise German sentences."
+      }
+    ]
+  },
+  {
+    "v": "6.7.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Modellkarten auf MakerWorld (Suche, Startseite, 3D-Modelle, Creator-Profile) zeigen jetzt zusätzlich eine grobe Schätzung, wie viele Punkte das Modell insgesamt eingebracht haben dürfte – berechnet aus dem Community-Durchschnitt, nicht von MakerWorld selbst bestätigt.",
+        "en": "Model cards on MakerWorld (search, homepage, 3D models, creator profiles) now also show a rough estimate of roughly how many points the model has likely earned overall – calculated from the community average, not confirmed by MakerWorld itself."
+      }
+    ],
+    "fixes": []
+  },
+  {
+    "v": "6.6.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Punkte-Erfassung ist jetzt zuverlässiger: liest die Summen auf jedem Reiter der Punkte-Seite korrekt aus und lädt einzelne Punkte-Buchungen jetzt auch selbstständig im Hintergrund nach, statt nur beim manuellen Durchblättern.",
+        "en": "Points capture is now more reliable: correctly reads the totals on every tab of the points page, and now also fetches individual point transactions in the background on its own instead of only while manually paging through them."
+      },
+      {
+        "de": "Die geschätzte Punkte-Spanne im Dashboard zeigt jetzt zusätzlich eine Aufschlüsselung nach Downloads-Größe des Modells sowie einen Vergleich mit der alten, bis Mitte 2025 öffentlichen Formel.",
+        "en": "The estimated points range in the dashboard now also breaks down by the model’s download size and compares against the old formula that was public until mid-2025."
+      }
+    ],
+    "fixes": [
+      {
+        "de": "Die Punkte-Ansicht war streckenweise unnötig textlastig - jetzt kompakter mit Kacheln/Tabellen statt langer Erklärtexte.",
+        "en": "The points view was unnecessarily wordy in places - now more compact with tiles/tables instead of long explanatory text."
+      }
+    ]
+  },
+  {
+    "v": "6.5.0",
+    "date": "2026-09-24",
+    "features": [
+      {
+        "de": "Neu, standardmäßig ausgeschaltet: eine Zustimmung dafür, deine eigenen Punkte/Belohnungen mit zu erfassen und für eine bessere, gemeinschaftliche Schätzung beizutragen. Ohne Zustimmung wird dazu weiterhin nichts erfasst. Zu finden im Onboarding (das dafür einmalig erneut geöffnet wird) und jederzeit änderbar unter Einstellungen → Öffentliche Daten.",
+        "en": "New, off by default: an opt-in to also capture your own points/rewards and contribute them toward a better, community-wide estimate. Nothing is captured for this without your consent. Found in onboarding (which reopens once for this) and changeable anytime under Settings → Public Data."
+      },
+      {
+        "de": "Neue Ansicht „Punkte\" im Dashboard: dein eigener Punkteverlauf (bei aktivierter Zustimmung) sowie eine gemeinschaftlich geschätzte Spanne, wie viele Punkte ein Download/Print ungefähr bringt.",
+        "en": "New “Points” view in the dashboard: your own points history (with consent enabled) plus a community-estimated range for roughly how many points a download/print is worth."
+      },
+      {
+        "de": "Mit aktivierter Punkte-Zustimmung werden jetzt auch die einzelnen Punkte-Buchungen erfasst (Modell/Print-Profil + Tag statt nur des Tagesgesamtwerts) – die Schätzung wird dadurch deutlich genauer.",
+        "en": "With points consent enabled, individual point transactions are now captured too (model/print profile + day instead of just the daily total) – making the estimate noticeably more accurate."
+      }
+    ],
+    "fixes": []
+  },
+  {
     "v": "6.4.2",
     "date": "2026-09-24",
     "features": [

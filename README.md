@@ -3,6 +3,7 @@
 Turns MakerWorld into an analytics dashboard for 3D-model creators. MW Stats reads the data MakerWorld already shows you while you browse and turns it into clear insights — right inside the page and in a full dashboard.
 
 [![Get it on Chrome Web Store](https://img.shields.io/badge/Chrome-Install-4285F4?logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/mw-stats-%E2%80%93-analytics-for/gednlaeoicnlghmnbkineoancpilkhjj)
+[![Get it on Microsoft Edge Add-ons](https://img.shields.io/badge/Edge-Install-0078D7?logo=microsoftedge&logoColor=white)](https://microsoftedge.microsoft.com/addons/detail/epmaiffpahakpamcpcoghfikciddflei)
 [![Get it on Firefox Add-ons](https://img.shields.io/badge/Firefox-Install-FF7139?logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/de/firefox/addon/mw-stats-analytics-makerworld/)
 
 ![Overview dashboard](screenshots/screenshot-1-overview.png)
@@ -20,6 +21,8 @@ Turns MakerWorld into an analytics dashboard for 3D-model creators. MW Stats rea
 - **Automation** — let MW Stats open your uploads, Creator Center, popular searches and the home feeds in a background tab and collect the data, manually or on a schedule.
 - **Long-term database with backup** — compare tag rankings with last month or last year, export/import all data as a file.
 - **Optional community data** — a single "Use & Share Public Data" switch lets you share public model metrics (downloads, likes, tags, …) with a small central service and see aggregated community trends in return. Off by default, and Creator Center / account data is never sent regardless of this setting.
+- **Points estimate** — MakerWorld stopped publishing how many points a download/print/boost is worth in mid-2025. A separate, off-by-default "Points & Rewards" switch lets you contribute your own points data toward a community-wide estimate, shown as a range on model cards, in the dashboard and on model pages.
+- **9 languages** — English, German, French, Spanish, Turkish, Polish, Italian, Portuguese and Dutch.
 
 | | | |
 |---|---|---|
@@ -28,12 +31,13 @@ Turns MakerWorld into an analytics dashboard for 3D-model creators. MW Stats rea
 
 ## Install
 
-- **Chrome / Edge / Brave** (Chromium): [Chrome Web Store](https://chromewebstore.google.com/detail/mw-stats-%E2%80%93-analytics-for/gednlaeoicnlghmnbkineoancpilkhjj)
+- **Chrome / Brave** (Chromium): [Chrome Web Store](https://chromewebstore.google.com/detail/mw-stats-%E2%80%93-analytics-for/gednlaeoicnlghmnbkineoancpilkhjj)
+- **Edge**: [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/epmaiffpahakpamcpcoghfikciddflei)
 - **Firefox**: [addons.mozilla.org](https://addons.mozilla.org/de/firefox/addon/mw-stats-analytics-makerworld/)
 
 ## Privacy
 
-By default, everything stays **locally in your browser** — no account, no login required. Since version 6, you can optionally turn on a single setting to share *public* model metrics (downloads, likes, tags, model name — never your MakerWorld login, session or Creator Center data) with a small central service, in exchange for seeing aggregated trends contributed by other installations. This is off unless you switch it on, and can be switched off again at any time.
+By default, everything stays **locally in your browser** — no account, no login required. Since version 6, you can optionally turn on a single setting to share *public* model metrics (downloads, likes, tags, model name — never your MakerWorld login, session or Creator Center data) with a small central service, in exchange for seeing aggregated trends contributed by other installations. A second, independent and also off-by-default switch ("Points & Rewards") lets you additionally contribute your own points data toward the community points estimate. Both are off unless you switch them on, and can be switched off again at any time.
 
 Read the full [Privacy Policy](https://dandulox.github.io/mw-stats-privacy/) for details, including what is (and isn't) shared and why.
 
