@@ -14,12 +14,15 @@
   h2 { font-size: 19px; margin: 32px 0 8px; padding-top: 16px; border-top: 1px solid var(--ln) }
   .mu { color: var(--mu) } a { color: var(--ac) }
   li { margin: 4px 0 }
+  .back { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: 14px; font-weight: 600; margin-bottom: 20px }
+  .back:hover { text-decoration: underline }
 </style>
 </head>
 <body>
 <main>
+  <a class="back" href="https://mwstats.fomio.de">← Zurück zu mwstats.fomio.de</a>
   <h1><span>MW</span> Stats – Privacy Policy</h1>
-  <p class="mu">Last updated: 24 September 2026 · v6.13 · Deutsche Fassung unten</p>
+  <p class="mu">Last updated: 26 September 2026 · v6.13 · Deutsche Fassung unten</p>
 
   <h2>Who we are</h2>
   <p>MW Stats is a browser extension by Fomio (<a href="https://makerworld.com/@fomio">makerworld.com/@fomio</a>). It is an independent project and is not affiliated with Bambu Lab or MakerWorld.</p>
@@ -61,7 +64,14 @@
   <p>In the extension settings you can export all data as JSON, delete market data, delete everything, or switch public data sharing on or off at any time. Uninstalling the extension removes all locally stored data (previously shared public model statistics remain on the server, since they are aggregate/anonymous by design and not tied to your identity).</p>
 
   <h2>Contact</h2>
-  <p>Questions: via <a href="https://makerworld.com/@fomio">makerworld.com/@fomio</a>.</p>
+  <p>Questions: via <a href="https://makerworld.com/@fomio">makerworld.com/@fomio</a> or the contact form on this website.</p>
+
+  <h2>This website (the MW Stats landing page)</h2>
+  <p>The above sections describe the browser <b>extension</b>. This website (where this policy is linked from) is a separate, static promotional page and processes data of its own, kept intentionally minimal:</p>
+  <ul>
+    <li><b>Anonymous, cookie-less analytics:</b> when you load the page, it sends a page-view event to <b>api.fomio.de</b>: the page path, and, if you arrived via a link, the <b>domain only</b> of the referring site (e.g. "google.com", never the full URL). When you click one of the "install" buttons (Chrome Web Store, Edge Add-ons, Firefox), which store it points to is recorded the same way. No cookie, IP address, or browser fingerprint is stored, and nothing is linked across visits or devices – each event is a standalone, anonymous data point used only to see how many people visit and which links they came from. These events are automatically deleted after 180 days.</li>
+    <li><b>Contact form:</b> if you use the contact form, the name, email address and message you enter are sent to <b>api.fomio.de</b> and stored so we can read and reply to your message. They are visible only to Fomio's admin panel (password + two-factor protected), are never sold or shared with third parties, and are kept until the request is resolved or you ask us to delete them (via the same contact channel).</li>
+  </ul>
 
   <h2>Datenschutzerklärung (Deutsch)</h2>
   <p>MW Stats ist eine Browser-Erweiterung von Fomio und ein unabhängiges Projekt ohne Verbindung zu Bambu Lab oder MakerWorld.</p>
@@ -75,6 +85,13 @@
   <p><b>Netzwerkanfragen:</b> an makerworld.com (eigene Modelle und fehlende Tags angezeigter Modelle, gedrosselt, mit deiner bestehenden Sitzung) sowie – nur bei aktivierter Freigabe öffentlicher Daten und/oder Punkte-Daten – an api.fomio.de wie oben beschrieben.</p>
   <p><b>Kein Tracking, kein Verkauf:</b> keine Analyse-, Werbe- oder Tracking-Dienste. Daten werden nie verkauft oder an Dritte weitergegeben.</p>
   <p><b>Kontrolle:</b> In den Einstellungen kannst du alle Daten als JSON exportieren, löschen oder die Freigabe öffentlicher Daten jederzeit an-/ausschalten. Beim Deinstallieren werden alle lokal gespeicherten Daten entfernt (bereits geteilte öffentliche Modell-Kennzahlen bleiben auf dem Server, da sie aggregiert/anonym sind und nicht mit deiner Identität verknüpft werden).</p>
+
+  <h2>Diese Website (die MW-Stats-Landingpage)</h2>
+  <p>Die obigen Abschnitte beschreiben die Browser-<b>Erweiterung</b>. Diese Website (von der aus diese Erklärung verlinkt ist) ist eine eigenständige, statische Werbeseite mit eigener, bewusst minimaler Datenverarbeitung:</p>
+  <ul>
+    <li><b>Anonyme, cookie-lose Analyse:</b> Beim Laden der Seite wird ein Seitenaufruf an <b>api.fomio.de</b> gesendet: der Seitenpfad und, falls du über einen Link gekommen bist, <b>nur die Domain</b> der verweisenden Seite (z. B. „google.com", nie die vollständige URL). Ein Klick auf einen der Installations-Buttons (Chrome Web Store, Edge Add-ons, Firefox) wird ebenso erfasst, nur welcher Store. Es wird kein Cookie, keine IP-Adresse und kein Browser-Fingerabdruck gespeichert, und nichts wird über Besuche oder Geräte hinweg verknüpft – jedes Ereignis ist ein eigenständiger, anonymer Datenpunkt, der nur zeigt, wie viele Personen die Seite besuchen und über welche Links. Diese Ereignisse werden automatisch nach 180 Tagen gelöscht.</li>
+    <li><b>Kontaktformular:</b> Nutzt du das Kontaktformular, werden Name, E-Mail-Adresse und Nachricht an <b>api.fomio.de</b> gesendet und gespeichert, damit wir antworten können. Sie sind nur im passwort- und 2FA-geschützten Admin-Bereich von Fomio sichtbar, werden nie verkauft oder an Dritte weitergegeben und bleiben gespeichert, bis die Anfrage erledigt ist oder du uns (über denselben Weg) um Löschung bittest.</li>
+  </ul>
 </main>
 </body>
 </html>
